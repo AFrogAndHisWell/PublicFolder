@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Đăng kí tài khoản </title>
+
+</head>
+
+<body>
+    <script>
+    function kiemtra() {
+        
+        if (document.getElementById("name").value == "") {
+            alert("Nhập tên");          
+            document.getElementById("name").focus();
+            return false;
+        }
+        if (document.getElementById("address").value == "") {
+            alert("Nhập địa chỉ");
+            document.getElementById("address").focus();
+            return false;
+        }
+        if (document.getElementById("phone").value == "") {
+            alert("Nhập số đt");
+            document.getElementById("phone").focus();
+            return false;
+        }
+        if (document.getElementById("username").value == "") {
+            alert("Nhập tên đăng nhập");
+            document.getElementById("username").focus();
+            return false;
+        }
+        if (document.getElementById("pass").value == "") {
+            alert("Nhập mật khẩu");
+            document.getElementById("pass").focus();
+            return false;
+        }
+        if (document.getElementById("repass").value != document.getElementById("pass").value) {
+            alert("Nhập lại đúng mật khẩu đã nhập");
+            document.getElementById("repass").focus();
+            return false;
+        }
+        alert("Hợp lệ");
+        return true;
+    }
+    function hienthi(){
+        if (kiemtra()==true) {
+        console.log(document.getElementById("name").value);
+        //document.write("<div> Thong tin </div>");
+
+        } 
+        
+    } 
+
+    
+    function hide(){
+        document.getElementById("content").style.display ='none';
+    }
+    
+    </script>
+    <div class="wrapper" id="content">
+        <div class="header">
+            <div id ="tieude" style="border:yellow solid 1px;width:70px;margin-left:250px;margin-top:10px;float:left;">ĐĂNG KÍ</div>
+            <div   style="width:auto;height:auto;float:right;margin-right:20px;margin-top:10px;"  ><input id="xbutton" type="button" onclick="hide();" value="X" style="background-color: red;"></div>
+
+        </div>
+        <div class="left">
+            <form class="formleft">
+                Họ và tên <br><input name="hovaten" id="name"  value="" style="border-radius: 7px;border: red 1px solid;" placeholder="Nhập vào họ và tên">
+                <br>
+                Địa chỉ <br><input name ="diachi" id="address" value="" style="border-radius: 7px;border: red 1px solid;" placeholder="Nhập vào địa chỉ">
+                <br>
+                Điện thoại <br><input name ="dienthoai" id="phone" value=""style="border-radius: 7px;border: red 1px solid;" placeholder="Nhập vào số điện thoại"> <br>
+                Giới tính <br>
+                <input type="radio" id="male" name="gender" value="nam" checked> Nam
+                <input type="radio" id ="female" name="gender" value="nu" > Nữ 
+                <br>
+            </form>
+
+        </div>
+        <div class="right">
+            <form class="formright">
+                Tên đăng nhập <br><input name="tendangnhap" id="username" value="" style="border-radius: 7px;border: red 1px solid;">
+                <br>
+                Mật khẩu <br><input name="matkhau" id ="pass" value="" type="password" style="border-radius: 7px;border: red 1px solid;"> <br>
+                Mật khẩu lại <br><input name="laimatkhau" id="repass" value="" type="password" style="border-radius: 7px;border: red 1px solid;"> <br>
+               
+            </form>
+        </div>
+    <div id="ketqua"></div>
+        
+    
+        
+        <div class="footer">
+            <div style="margin-left:25px;">
+                <input class="slctbutton" type="submit" value="ĐĂNG KÍ" style="border-radius: 20px;" onclick="hienthi();">
+                    
+
+                <input class="slctbutton" type="submit" value="THAY ĐỔI VỊ TRÍ" style="border-radius: 20px;">
+
+                <input class="slctbutton" type="submit" value="THAY ĐỔI GIÁ TRỊ" style="border-radius: 20px;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
