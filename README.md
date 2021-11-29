@@ -1,1 +1,1 @@
-# PublicFolder This is the place i share my code for everyone!
+This is the place i share my code for everyone!
